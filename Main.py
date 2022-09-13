@@ -244,13 +244,61 @@ from webbrowser import get
 #Debug
 #Choose debug option by file then set a breakpoint by F9
 #then start debugging by F5
-def multiply(*numbers):
-    total = 1
-    for number in numbers:
-        total *= number
-    return total
-    
-print("Start")
-print(multiply(1, 2, 3))
+# def multiply(*numbers):
+#     total = 1
+#     for number in numbers:
+#         total *= number
+#     return total
+
+# print("Start")
+# print(multiply(1, 2, 3))
 
 
+#Shortcuts are option and left and right arrows to move 
+#copmletely to the right or left
+
+
+#Exercise
+# def fizz_buzz(input):
+#     if input % 3 == 0:
+#         return "Fizz"
+#     else:
+#         return "Buzz"
+
+# print(fizz_buzz(15))
+
+#Lists
+
+# letters = ["a", "b", "c"]
+# matrix = [[1, 2] [2, 3]]
+# zeros = [0] * 5
+# print(zeros)
+# numbers = list(range(20))
+# chars = list("Hello World!")
+# print(chars)
+# combine = zeros + letters
+# print(combine)
+
+#Accessoing Items
+# letters = ["a", "b", "c", "d"]
+# print(letters[0])
+# #change the index so:
+# letters [0] = "A"
+# print(letters[0:3])
+# numbers = list (range(20))
+# print(numbers)
+# #print every 2 elements
+# print(numbers[::2])
+
+#List unpacking
+# numbers = [1, 2, 3, 4]
+# first, second, third, fourth = numbers
+# first, * other, last = numbers
+# print(first, last)
+# print(other)
+
+
+#Loops over lists
+letters =["a", "b", "c"]
+for letter in letters:
+    print(letter)
