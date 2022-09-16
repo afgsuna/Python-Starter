@@ -1,4 +1,8 @@
+from ast import Expression
+from itertools import count
 import math
+from os import PRIO_PROCESS
+from re import S
 from webbrowser import get
 
 # Variable
@@ -299,7 +303,96 @@ from webbrowser import get
 
 
 #Loops over lists
-letters =["a", "b", "c"]
-for letter in enumerate (letters):
-    print(letter[0])
-    
+# letters =["a", "b", "c"]
+# item = (1, "a")
+# index, letter = items
+# for index, letter in enumerate (letters):
+#     print(letter, index)
+
+
+# Add or remove items to the list
+# letters = ["a", "b", "c"]
+
+# # Adding method
+# letters.append("d")
+# letters.insert(0, "e")
+# print(letters)
+
+# # Removing Object
+# letters.pop(0)
+# letters.remove("a")
+# del letters[0:3]
+# letters.clear()
+
+#Finding items 
+# letters = ["a", "b", "c"]
+# letters(letters.count("a"))
+# if "d" in letters:
+#    print(letters.index("d"))
+   
+#Sorting list 
+# numbers = [3, 51, 2, 8 ,6]
+# numbers.sort(reverse=True)
+# print(sorted(numbers, reverse=True))
+# sorted(numbers)
+# print(numbers)
+
+# items = [
+#     ("Product1", 10),
+#     ("Product1", 9), 
+#     ("Product1", 12),  
+# ] 
+
+# def sort_item(item): 
+#     return item[1]  
+
+# items.sort(key=sort_item)
+# print(items)
+ 
+
+#Lambda functions
+# items = [
+#     ("Product1", 10),
+#     ("Product1", 9), 
+#     ("Product1", 12),  
+# ] 
+
+# items.sort(key=lambda item:item[1])
+# print(items)
+
+
+# Map functions
+
+# items = [
+#     ("Product1", 10),
+#     ("Product1", 9), 
+#     ("Product1", 12),  
+# ] 
+
+# prices = list(map(lambda item:item[1], items))
+# print(prices)
+
+# Exeptions
+
+# try:
+#     age = int (input("Age: "))  
+# except ValueError as ex: 
+#     print ("You dident enter a valid age")
+#     print(ex)
+#     print(type(ex))
+# else:
+#     print ("No exceptions were thrown")
+# print("Execution continues.")
+
+#Handling different types of exceptions
+
+try:
+    age = int (input("Age"))
+    xfactor = 10 / age
+
+except ValueError:
+    print ("You dident enter a valid age")
+except ZeroDivisionError:
+    print("Age cant be zero")
+else:
+    print("No exceptions were thrown")
