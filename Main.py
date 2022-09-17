@@ -4,6 +4,7 @@ import math
 from os import PRIO_PROCESS
 from re import S
 from webbrowser import get
+from timeit import timeit
 
 # Variable
 # print ("Hello World")
@@ -386,13 +387,103 @@ from webbrowser import get
 
 #Handling different types of exceptions
 
-try:
-    age = int (input("Age"))
-    xfactor = 10 / age
+# try:
+#     age = int (input("Age"))
+#     xfactor = 10 / age
 
-except ValueError:
-    print ("You dident enter a valid age")
-except ZeroDivisionError:
-    print("Age cant be zero")
-else:
-    print("No exceptions were thrown")
+# except (ValueError, ZeroDivisionError):
+#     print ("You dident enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+
+#Cleaning up
+
+# try:
+#     file =open("Main.py")
+#     age = int (input("Age"))
+#     xfactor = 10 / age
+#     file.close()
+
+# except (ValueError, ZeroDivisionError):
+#     print ("You dident enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+# finally:
+#     file.close()
+
+
+#The with statement
+# try:
+#     with open("Main.py") as file, open("another.txt") as target:
+#         print("File opned")
+#     age = int (input("Age"))
+#     xfactor = 10 / age
+#     file.close()
+
+# except (ValueError, ZeroDivisionError):
+#     print ("You dident enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+
+
+#Raising Exeptions
+
+# def calculate_xFactor(age):
+#     if age <= 0:
+#         raise ValueError("Age cannot be zero or less.")
+#     return 10 / age
+
+# try:
+#     calculate_xFactor(-1)
+# except ValueError as error:
+#     print (error) 
+    
+
+
+# Raising Exeptions Costs 
+
+# code1 = """
+# def calculate_xFactor(age):
+#          if age <= 0:
+#              raise ValueError("Age cannot be zero or less.")
+#          return 10 / age
+
+# try:
+#     calculate_xFactor(-1)
+# except ValueError as error:
+#     print (error) 
+# """
+
+# code2 = """
+# def calculate_xFactor(age):
+#          if age <= 0:
+#              return None
+#          return 10 / age
+
+# xfactor = calculate_xFactor(-1)
+# if xfactor == None:
+#     pass
+# """
+# print("first code", timeit(code1, number=10000))
+# print("second code", timeit(code2, number=10000))
+
+
+#Classes
+class Point:
+    defualt_color = "red"
+    
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def draw(self):
+        print(f"Point ({self.x}, {self.y})")    
+
+Point.defualt_color = "green"
+point = Point(1, 2)
+print(Point.defualt_color)
+point.z = 10
+point.draw()
+
+another = Point(3, 5)
+another.draw()
+    
