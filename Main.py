@@ -5,6 +5,8 @@ from os import PRIO_PROCESS
 from re import S
 from webbrowser import get
 from timeit import timeit
+from matplotlib import pyplot as plt
+import numpy as np
 
 # Variable
 # print ("Hello World")
@@ -469,21 +471,36 @@ from timeit import timeit
 
 
 #Classes
-class Point:
-    defualt_color = "red"
+# class Point:
+#     defualt_color = "red"
     
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    def draw(self):
-        print(f"Point ({self.x}, {self.y})")    
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#     def draw(self):
+#         print(f"Point ({self.x}, {self.y})")    
 
-Point.defualt_color = "green"
-point = Point(1, 2)
-print(Point.defualt_color)
-point.z = 10
-point.draw()
+# Point.defualt_color = "green"
+# point = Point(1, 2)
+# print(Point.defualt_color)
+# point.z = 10
+# point.draw()
 
-another = Point(3, 5)
-another.draw()
+# another = Point(3, 5)
+# another.draw()
+
+ 
+ 
+# Creating dataset
+cars = ['Hasan', 'Dino', 'Martin',
+        'Ibbrahim']
+ 
+data = [25, 25, 25, 25,]
+ 
+# Creating plot
+fig = plt.figure(figsize =(10, 7))
+plt.pie(data, labels = cars)
+ 
+# show plot
+plt.show()
     
